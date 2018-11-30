@@ -13,6 +13,7 @@ body {
     height: 70vh;
     background-image: linear-gradient(rgb(255, 255, 255), rgb(242, 242, 248));
     display: flex;
+    overflow: hidden;
 }
 
 .container {

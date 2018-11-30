@@ -1,0 +1,15 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.online {
+    background-color: #01a3a4;
+    color:#00d2d3;
+}
+.offline {
+    background-color: #341f97;
+    color: #5f27cd;
+}
