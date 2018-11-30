@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+}
+
+#banner {
+    width: 100%;
+    height: 70vh;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(242, 242, 248));
+    display: flex;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#image-car {
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    transform: translateX(100px);
+}
+
+/* BUTTONS */
+.colors {
+    flex-basis: 200px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.colors-title {
+    margin-bottom: 15px;
+}
+.btn-color {
+    max-width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.3;
+    transform: translateX(-15%);
+}
+.btn-color.active {
+    opacity: 1;
+}
+
+
+/* TEXTS */
+.texts-title {
+    font-weight: 800;
+    color: #40424a;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+.texts-subtitle {
+    font-weight: 600;
+    color: #73757d;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
