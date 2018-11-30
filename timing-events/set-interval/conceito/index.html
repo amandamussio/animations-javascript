@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>setInterval/clearInterval example</title>
+
+  <script>
+    var nIntervId;
+
+    /*
+      window.setInterval('funcao()', intervalo_em_milisegundos);
+    setInterval(function() { console.log("setInterval: Ja passou 1 segundo!"); }, 1000);
+
+    setInterval vai chamar a função passada indefinidamente sempre no intervalo de tempo passado.
+    
+    */
+
+    window.onload = changeColor();
+ 
+    function changeColor() {
+      nIntervId = setInterval(flashText, 1000);
+    }
+ 
+    function flashText() {
+      var oElem = document.getElementById('my_box');
+      oElem.style.color = oElem.style.color == 'red' ? 'blue' : 'red';
+      // oElem.style.color == 'red' ? 'blue' : 'red' is a ternary operator.
+    }
+ 
+    function stopTextColor() {
+      clearInterval(nIntervId);
+    }
+  </script>
+</head>
+ 
+<body>
+  <div id="my_box">
+    <p>Hello World</p>
+  </div>
+
+  <button onclick="stopTextColor();">Stop</button>
+</body>
+</html>

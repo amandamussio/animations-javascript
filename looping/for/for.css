@@ -1,0 +1,107 @@
+html, body {
+    background: black;
+    margin: 0;
+    padding: 0;
+    color: #999;
+  }
+  
+  #wrap {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  #blurb {
+    text-align: center;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 999;
+  }
+  #blurb h1 {
+    color: white;
+  }
+  
+  .line-reveal {
+    width: 120%;
+    height: 3px;
+    overflow: hidden;
+    position: absolute;
+  }
+  .line-reveal.show .overlay {
+        animation: wipe 3s ease;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  .line-reveal .overlay {
+    background: black;
+    height: 10px;
+    position: absolute;
+    top: -5px;
+    width: 100%;
+    -webkit-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+  }
+  .line-reveal .line {
+    border: 3px dashed white;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+  
+  #line-a {
+    left: 0;
+    top: 60%;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: rotate(-50deg);
+            transform: rotate(-50deg);
+  }
+  #line-a .line {
+    border-color: #ff9900;
+  }
+  
+  #line-b {
+    left: 0;
+    bottom: 20%;
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  #line-b .line {
+    border-color: #ff0099;
+  }
+  
+  #line-c {
+    right: 10%;
+    bottom: 0;
+    -webkit-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
+  }
+  #line-c .line {
+    border-color: #0099ff;
+  }
+  
+  @-webkit-keyframes wipe {
+    to {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+    }
+  }
+  
+  @keyframes wipe {
+    to {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+    }
+  }
+  
