@@ -13,6 +13,7 @@ body {
     height: 70vh;
     background-image: linear-gradient(rgb(255, 255, 255), rgb(242, 242, 248));
     display: flex;
+    overflow: hidden;
 }
 
 .container {
@@ -33,7 +34,7 @@ body {
 /* BUTTONS */
 .colors {
     flex-basis: 200px;
-    padding: 30px 20px;
+    padding: 30px 50px 0 20px;
     display: flex;
     flex-direction: column;
 }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operadores</title>
+</head>
+<body>
+
+    <h1>Operadores</h1>
+
+    <h2>==</h2>
+    <p>Verifica se o valor é igual</p>
+
+    <h2>===</h2>
+    <p>Verifica se o valor é igual e se é do mesmo tipo</p>
+
+    <h2>!=</h2>
+    <p>Verifica se o valor é diferente</p>
+
+    <h2>!==</h2>
+    <p>Verifica se o valor é diferente e não é do mesmo tipo</p>
+
+    <hr>
+
+    <h2> < </h2>
+    <p>Menor que</p>
+
+    <h2> > </h2>
+    <p>Maior que</p>
+
+    <h2> <= </h2>
+    <p>Menor igual</p>
+
+    <h2> >= </h2>
+    <p>Maior igual</p>
+
+    <hr>
+
+    <h2>&& (E)</h2>
+    <p>o Resultado só é verdadeiro quando as duas expressões são verdadeiros; caso contrário, ele resulta em false</p>
+    <p>Se eu for verdade && e eue também = verdade</p>
+
+    <h2>|| (ou)</h2>
+    <p>o Resultado é verdadeiro quando uma das expressões for verdadeira</p>
+
+    <script>
+
+        var a = 1; //number
+        var b = '1'; //string
+
+        var c = 2;
+        var d = 3;
+
+        // == Verifica se o valor é igual mas não o tipo de dado
+        console.log('a == b ', a == b );
+        console.log('a === b ', a === b );
+        console.log('a != b ', a != b );
+        console.log('a !== b ', a !== b );
+
+        true && true;    // => true
+        true && false;   // => false
+        false && true;   // => false
+        false && false;  // => false
+
+        true || true;     // => true
+        true || false;    // => true
+        false || true;    // => true
+        false || false;   // => false
+        
+
+
+    </script>
+    
+</body>
+</html>
