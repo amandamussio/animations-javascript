@@ -26,6 +26,8 @@ body {
     height: auto;
     max-width: 90%;
     transform: translateX(100px);
+    position: relative;
+    animation: carShow 2s;
 }
 
 /* BUTTONS */
@@ -50,11 +52,15 @@ body {
 
 
 /* TEXTS */
+.texts {
+    position: relative;
+    animation: textShow 3s;
+}
 .texts-title {
     font-weight: 800;
     color: #40424a;
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 5rem;
 }
 .texts-subtitle {
     font-weight: 600;
@@ -63,3 +69,20 @@ body {
     font-size: 2rem;
 }
 
+@keyframes carShow {
+    from {
+        right: -800px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@keyframes textShow {
+    from {
+        top: -300px;
+    }
+    to {
+        top: 0;
+    }
+}
