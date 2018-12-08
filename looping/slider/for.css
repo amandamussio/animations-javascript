@@ -30,6 +30,20 @@
     position: relative;
     animation: clock 0.3s ease-out;
 }
+#fadeBox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0;
+    z-index: 3;
+}
+
+#fadeBox.active {
+ animation: fadeAnimate 2s ease-in 3;
+}
 
 @keyframes bgAnimatedLeft{
     from {
@@ -55,5 +69,14 @@
     }
     to {
         bottom: 0;
+    }
+}
+
+@keyframes fadeAnimate {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

@@ -4,6 +4,7 @@ function init() {
     var bgTop = document.getElementById('background-1');
     var bgBottom = document.getElementById('background-2');
     var containerClock = document.getElementById('clock');
+    var fadeBox = document.getElementById('fadeBox');
     
     var listImages = [
         {
@@ -34,8 +35,7 @@ function init() {
             bgTop.style.backgroundImage = `url('${listImages[index].bgTop}')`
             bgBottom.style.backgroundImage = `url('${listImages[index].bgBottom}')`
             createImage(listImages[index].image);
-            console.log('image', imageClock)
-            console.log('image', imageClock)
+            showFade();
         }, index * 2000);
     }
 
@@ -54,8 +54,8 @@ function init() {
         containerClock.removeChild(element);
     }
 
-    function createFade() {
-        
+    function showFade() {
+        fadeBox.classList.add('active')
     }
 }
 
