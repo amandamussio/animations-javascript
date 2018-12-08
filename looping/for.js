@@ -53,5 +53,9 @@ function init() {
         let element = document.getElementById('imageClock');
         containerClock.removeChild(element);
     }
+
+    function createFade() {
+        
+    }
 }
 
