@@ -45,6 +45,140 @@
  animation: fadeAnimate 2s ease-in 3;
 }
 
+/* 
+
+clock small
+
+*/
+
+#clockSmall {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#clockOptions {
+    background: #000;
+    width: 300px;
+    height: 600px;
+    position: relative;
+}
+
+.logo {
+    display: block;
+    position: relative;
+    top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.button {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 3px solid #c3a07d;
+    border-radius: 50%;
+    color: #c3a07d;
+    font-size: 24px;
+    outline: none;
+}
+
+#prev {
+    transform: translateX(-50px);
+}
+#prev span {
+    position: relative;
+    left: 20px;
+}
+
+#next {
+    transform: translateX(50px);
+}
+#next span {
+    position: relative;
+    right: 20px;
+}
+
+#pulseiraTopo {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+#pulseiraTopo .entrada {
+    position: relative;
+    animation: pulseiraTop 0.5s;
+}
+#pulseiraTopo .saida {
+    position: relative;
+    animation: pulseiraTopSaida 0.5s;
+}
+#pulseiraRodape {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+#pulseiraRodape .entrada {
+    position: relative;
+    animation: pulseiraRodape 0.5s;
+}
+#pulseiraRodape .saida {
+    position: relative;
+    animation: pulseiraRodapeSaida 0.5s;
+}
+.buttonLink {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    z-index: 10;
+}
+#bullets {
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.bullet {
+    margin: 5px;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 4px;
+    border: 2px solid;
+}    
+
+.bullet.active {
+    border-color: #c3a07d;
+    border-radius: 50%;
+   
+}
+
 @keyframes bgAnimatedLeft{
     from {
         background-position: center center;
@@ -78,5 +212,47 @@
     }
     to {
         opacity: 1;
+    }
+}
+@keyframes pulseiraTop {
+    from {
+        top: -50px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+@keyframes pulseiraTopSaida {
+    from {
+        top: 0;
+        opacity: 1;
+    }
+    to {
+        top: -50px;
+        opacity: 0;
+    }
+}
+
+@keyframes pulseiraRodape {
+    from {
+        bottom: -50px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+@keyframes pulseiraRodapeSaida {
+    from {
+        bottom: 0;
+        opacity: 1;
+    }
+    to {
+        bottom: -50px;
+        opacity: 0;
+        
     }
 }

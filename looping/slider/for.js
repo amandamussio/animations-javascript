@@ -28,16 +28,23 @@ function init() {
         doSetTimeout(index)
     }
 
-
     function doSetTimeout(index) {
         setTimeout(function() {  
-            console.log(bgTop.style.backgroundImage)
             bgTop.style.backgroundImage = `url('${listImages[index].bgTop}')`
             bgBottom.style.backgroundImage = `url('${listImages[index].bgBottom}')`
             createImage(listImages[index].image);
             showFade();
+            if(index === listImages.length - 1) {
+                setTimeout(function() {
+                    removeImage() 
+                    bgTop.style.display = "none"
+                    bgBottom.style.display = "none"
+                    depoisDoSlider();
+                }, 2000)
+            }
+
         }, index * 2000);
-    }
+     }  
 
     function createImage(srcImage) {
         if(containerClock.children.length > 0) {
@@ -57,5 +64,11 @@ function init() {
     function showFade() {
         fadeBox.classList.add('active')
     }
+
+    // ================================
+
+
+
+
 }
 
